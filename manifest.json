@@ -5,11 +5,10 @@
     "background": {
         "service_worker": "welcome/background.js"
     },
-    "browser_action": {
-        "default_icon": "pencil.png",
-        "popup": "shopcmp.htm"  
-      },
     "action": {
+        "default_icon": {              
+            "16": "./pencil.png"   
+        },
         "default_popup": "ext/index.html"
     },
     "content_scripts": [
