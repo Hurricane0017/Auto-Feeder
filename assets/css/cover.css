@@ -31,22 +31,37 @@ body {
  */
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  position: relative;
+  padding: .25rem 0.3rem;
   font-weight: 700;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
 }
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
 .nav-masthead .nav-link + .nav-link {
   margin-left: 1rem;
 }
-
+.nav-link{
+  font-size: 1.3rem;
+}
+.nav-link::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: #fff;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+}
+.nav-link:hover{
+  color: #fff;
+}
+.nav-link:hover::before{
+  transform: scaleX(1);
+}
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
