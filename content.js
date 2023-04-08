@@ -22,7 +22,8 @@ chrome.runtime.onMessage.addListener(
             }
           
             x = myframe.document.querySelectorAll('input[type="radio"]');
-            for (i = 1; i < x.length; i++){
+            console.log(x);
+            for (i = 2; i < x.length; i+=5){
                 if (x[i].getAttribute('name') == 'check'){
                     continue;
                 }
