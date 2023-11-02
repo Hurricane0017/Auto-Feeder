@@ -22,13 +22,23 @@ chrome.runtime.onMessage.addListener(
             }
           
             x = myframe.document.querySelectorAll('input[type="radio"]');
-            console.log(x);
-            for (i = 2; i < x.length; i+=5){
+            // console.log(x);
+
+            //for marking all excellent-uncomment below and then refresh extension 
+            for (i = 1; i < x.length; i++){
                 if (x[i].getAttribute('name') == 'check'){
                     continue;
                 }
                 x[i].click();
             }
+
+            //for marking all poor-uncomment below and then refresh extension 
+            // for (i = 2; i < x.length; i+=5){
+            //     if (x[i].getAttribute('name') == 'check'){
+            //         continue;
+            //     }
+            //     x[i].click();
+            // }
           
           }catch(err){
             console.log(err);
